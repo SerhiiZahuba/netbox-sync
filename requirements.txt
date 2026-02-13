@@ -6,3 +6,4 @@ pyvmomi==8.0.2.0.1
 aiodns==3.0.0
 pycares==4.0.0
 pyyaml==6.0.1
+hcloud
