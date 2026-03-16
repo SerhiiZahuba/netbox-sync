@@ -9,9 +9,27 @@ class HetznerConfig(ConfigBase):
 
     def __init__(self):
         self.options = [
-            ConfigOption("enabled", bool, default_value=True),
-            ConfigOption("type", str),
-            ConfigOption("api_token", str, mandatory=True),
+
+            ConfigOption(
+                "enabled",
+                bool,
+                default_value=True,
+                description="Enable or disable the Hetzner Cloud source."
+            ),
+
+            ConfigOption(
+                "type",
+                str,
+                default_value="hetzner",
+                description="Source type identifier. Must remain 'hetzner'."
+            ),
+
+            ConfigOption(
+                "api_token",
+                str,
+                mandatory=True,
+                description="Hetzner Cloud API token used to authenticate against the Hetzner Cloud API."
+            ),
         ]
 
         super().__init__()
